@@ -47,6 +47,7 @@ class BeerViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         game.title = titleTextField.text
         game.image = UIImagePNGRepresentation(gameImageView.image!) as NSData?
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
     }
     
 }
