@@ -35,7 +35,7 @@
                         <barButtonItem key="rightBarButtonItem" title="➕ Add" id="B2n-24-Eea">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="RhN-HP-tvj" kind="show" id="8JX-v1-o68"/>
+                                <segue destination="RhN-HP-tvj" kind="show" identifier="gameSegue" id="8JX-v1-o68"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,7 +73,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEQ-hM-k4w">
-                                <rect key="frame" x="113" y="286" width="148" height="49"/>
+                                <rect key="frame" x="113" y="301" width="148" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48299103529999998" green="0.59418786589999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
@@ -82,6 +82,19 @@
                                 </state>
                                 <connections>
                                     <action selector="addTapped:" destination="RhN-HP-tvj" eventType="touchUpInside" id="SMU-eX-STl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5p-Kt-c9v">
+                                <rect key="frame" x="113" y="358" width="148" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91358703374862671" green="0.47727853059768677" blue="0.58990341424942017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTapped:" destination="RhN-HP-tvj" eventType="touchUpInside" id="n1X-MV-08L"/>
+                                    <action selector="deleteTapped:" destination="RhN-HP-tvj" eventType="touchUpInside" id="eag-Q3-jE7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,6 +124,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="ZEQ-hM-k4w" id="lM4-Pj-Ucl"/>
+                        <outlet property="deleteButton" destination="z5p-Kt-c9v" id="lqQ-tc-2LE"/>
                         <outlet property="gameImageView" destination="EDC-zM-Nca" id="lSQ-h2-Cc1"/>
                         <outlet property="titleTextField" destination="h4Y-fL-UqQ" id="84F-aB-9J8"/>
                     </connections>
